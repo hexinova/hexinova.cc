@@ -3,64 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hexinova</title>
+    <title>Roblox Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-pill">
-            <a href="#" class="nav-link active">home</a>
-            <a href="https://hexinova.cc/discord" class="nav-link" target="_blank" rel="noopener noreferrer">discord</a>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i>
+                <span>RobloxDev</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Filter Section -->
-        <section class="filter-section">
-            <div class="filter-tabs">
-                <!-- Platform Filters -->
-                <button class="filter-btn icon-btn active" data-filter="all" title="All Products">
-                    <span class="filter-text">all</span>
-                </button>
-                <button class="filter-btn icon-btn" data-filter="windows" title="Windows">
-                    <img src="https://bloxproducts.com/assets/images/windows.png" alt="Windows" class="filter-icon">
-                </button>
-                <button class="filter-btn icon-btn" data-filter="android" title="Android">
-                    <img src="https://bloxproducts.com/assets/images/android.png" alt="Android" class="filter-icon">
-                </button>
-                <button class="filter-btn icon-btn" data-filter="macos" title="MacOS">
-                    <img src="https://bloxproducts.com/assets/images/mac.png" alt="MacOS" class="filter-icon">
-                </button>
-                
-                <!-- Category Filters -->
-                <button class="filter-btn" data-filter="executor">executor</button>
-                <button class="filter-btn" data-filter="external">external</button>
-                <button class="filter-btn" data-filter="serverside">serverside</button>
-                
-                <!-- Price Range Dropdown -->
-                <select class="filter-dropdown" id="priceRange">
-                    <option value="all">all prices</option>
-                    <option value="0-10">under $10</option>
-                    <option value="10-20">$10 - $20</option>
-                    <option value="20-30">$20 - $30</option>
-                    <option value="30+">$30+</option>
-                </select>
-                
-                <!-- Price Sort Dropdown -->
-                <select class="filter-dropdown" id="priceSort">
-                    <option value="asc">price: low to high</option>
-                    <option value="desc">price: high to low</option>
-                </select>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="Roblox Scripter">Roblox Scripter</h1>
+                <p class="tagline">I write Lua scripts for Roblox</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
-        </section>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-        <!-- Products Grid -->
-        <section class="products-container" id="productsContainer">
-            <!-- Products will be dynamically loaded here -->
-        </section>
-    </main>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Roblox scripter. I write Lua code and make stuff work.</p>
+                    <p>That's pretty much it. If you need scripts, systems, or game mechanics built, I can probably help.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Lines of Code</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">70%</div>
+                            <div class="stat-label">Scripting</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="games">Games</button>
+                <button class="filter-btn" data-category="systems">Systems</button>
+                <button class="filter-btn" data-category="ui">UI/UX</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Lua Scripting</h3>
+                    <p>Writing scripts for Roblox games</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Game Systems</h3>
+                    <p>Building systems like inventory, shops, combat</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Datastores</h3>
+                    <p>Player data saving and management</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Debugging</h3>
+                    <p>Finding and fixing issues in code</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <h3>Discord</h3>
+                            <p>hexinova</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-gamepad"></i>
+                        <div>
+                            <h3>Roblox</h3>
+                            <p>roblox remove mail blame them</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Roblox Developer Portfolio. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-gamepad"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
